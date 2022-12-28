@@ -1,0 +1,23 @@
+---
+- name: Prepare the server
+  hosts: queercoded
+  tasks:
+    - name: Install basic tools
+      become: true
+      ansible.builtin.apt:
+        name:
+          - vim
+          - git
+          - curl
+          - wget
+          - unzip
+          - zip
+        state: present
+        update_cache: true
+
+    - name: Add SSH keys to user
+      ansible.posix.authorized_key:
+        user: "{{ queercoded_user }}"
+        key: "{{ item }}"
+      with_items:
+        - "{{ queercoded_ssh_keys }}"
