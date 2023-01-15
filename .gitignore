@@ -1,1 +1,3 @@
 .vault-passwd
+roles/**
+!roles/requirements.yml

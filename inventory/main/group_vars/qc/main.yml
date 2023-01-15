@@ -1,0 +1,6 @@
+---
+queercoded_user: root
+k3s_role: master
+k3s_kubeconfig_local_dest: ~/.kube/queercoded.yaml
+
+...

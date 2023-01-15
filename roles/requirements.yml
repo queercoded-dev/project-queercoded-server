@@ -1,0 +1,7 @@
+---
+- src: https://github.com/diademiemi/ansible_role_k3s.git
+  name: role_k3s
+  scm: git
+  version: main
+
+...
